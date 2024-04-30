@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador de senhas</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>GERADOR DE SENHAS ALEATÓRIO</h1>
+
+    <div class="login-box">
+      <p id="result" onclick="copyContent()">Resultado</p>
+
+      <label class="cyberpunk-checkbox-label">
+        <input type="checkbox" class="cyberpunk-checkbox" />
+        Letras</label
+      >
+
+      <label class="cyberpunk-checkbox-label">
+        <input type="checkbox" class="cyberpunk-checkbox" />
+        Números</label
+      >
+
+      <label class="cyberpunk-checkbox-label">
+        <input type="checkbox" class="cyberpunk-checkbox" />
+        Símbolos</label
+      >
+
+      <label class="cyberpunk-checkbox-label">
+        <input type="checkbox" class="cyberpunk-checkbox" />
+        Maiúsculos</label
+      >
+
+      <label class="cyberpunk-checkbox-label">
+        <input type="checkbox" class="cyberpunk-checkbox" />
+        Minúsculos</label
+      >
+
+      <form>
+        <center>
+          <a href="#" onclick="generatePassword()">
+            Gerar senha
+            <span></span>
+          </a>
+        </center>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
