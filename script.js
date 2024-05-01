@@ -26,7 +26,7 @@ function copyContent() {
 }
 
 function generatePassword() {
-  let passwordLength = document.getElementById("range").value;
+  const passwordLength = document.getElementById("range").value;
   console.log(passwordLength);
 
   const options = {
@@ -43,12 +43,18 @@ function generatePassword() {
     }
   }
 
-  let password = "";
-  for (let i = passwordLength; i > 0; i--) {
-    const characterIndex = Math.floor(Math.random() * characters.length);
-    password += characters[characterIndex];
-  }
+  if (characters === "") {
+    const result = document.getElementById("result");
+    result.innerHTML = "Sua senha precisa ter alguma coisa &#x1F928;";
+    return;
+  } else {
+    let password = "";
+    for (let i = passwordLength; i > 0; i--) {
+      const characterIndex = Math.floor(Math.random() * characters.length);
+      password += characters[characterIndex];
+    }
 
-  const result = document.getElementById("result");
-  result.innerHTML = password;
+    const result = document.getElementById("result");
+    result.innerHTML = password;
+  }
 }
